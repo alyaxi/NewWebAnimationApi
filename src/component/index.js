@@ -126,6 +126,11 @@ function HorseAnimation() {
       charMovementAnimation.getAnimation().playbackRate = playbackRateChar;
       adjustPlayBack();
     })
+    document.addEventListener("touchstart", () => {
+      playbackRateChar  *= 1.1;
+      charMovementAnimation.getAnimation().playbackRate = playbackRateChar;
+      adjustPlayBack();
+    });
   },[playbackRateChar])
 
   return (
