@@ -114,6 +114,7 @@ function HorseAnimation() {
     cloudAnimation.currentTime = cloudAnimation.effect.getTiming().duration / 2;
     setInterval(() => {
       if (playbackRateChar > 0.4) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         playbackRateChar *= 0.9;
         charMovementAnimation.getAnimation().playbackRate = playbackRateChar;
         
