@@ -7,6 +7,7 @@ import cloud from './img/198daeda14097d45e417e62ff283f10e.png'
 import useWebAnimations from "@wellyshen/use-web-animations";
 
 function HorseAnimation() {
+//  const [playbackRateChar, setPlaybackRateChar] = useState({})
   var playbackRateChar = 1;
   var playbackRateBg = 0;
 
@@ -45,7 +46,7 @@ function HorseAnimation() {
   //   // keyframes
   const backgroundGrillFrame =[
     { transform: 'translate(0,0)' },
-    { transform: 'translate(2000,0)' },
+    // { transform: 'translate(2000,0)' },
     { transform: 'translate(-1000px,0)' },
   ]
   // ], { 
@@ -115,7 +116,7 @@ function HorseAnimation() {
       if (playbackRateChar > 0.4) {
         playbackRateChar *= 0.9;
         charMovementAnimation.getAnimation().playbackRate = playbackRateChar;
-
+        
       }
       adjustPlayBack();
     }, 3000);
@@ -124,7 +125,7 @@ function HorseAnimation() {
       charMovementAnimation.getAnimation().playbackRate = playbackRateChar;
       adjustPlayBack();
     })
-  },[adjustPlayBack])
+  },[playbackRateChar])
 
   return (
     <div>
@@ -147,7 +148,7 @@ function HorseAnimation() {
             </div>
 
             <div id="red-queen_and_alice">
-      <img id="red-queen_and_alice_sprite" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/sprite_running-alice-queen_small.png" srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/sprite_running-alice-queen.png 2x" ref={charMovementAnimation.ref} alt="Alice and the Red Queen running to stay in place." />
+      <img id="red-queen_and_alice_sprite" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/sprite_running-alice-queen_small.png" ref={charMovementAnimation.ref} alt="Alice and the Red Queen running to stay in place." />
     </div>
           </div>
         </div>
