@@ -124,7 +124,7 @@ function HorseAnimation() {
       charMovementAnimation.getAnimation().playbackRate = playbackRateChar;
       adjustPlayBack();
     })
-  })
+  },[adjustPlayBack])
 
   return (
     <div>

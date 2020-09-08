@@ -6,8 +6,11 @@ import HorseAnimation from "./component/index"
 function App() {
 
   return (
+    <div>
  
     <HorseAnimation/>
+    </div>
+
         
 
   );
